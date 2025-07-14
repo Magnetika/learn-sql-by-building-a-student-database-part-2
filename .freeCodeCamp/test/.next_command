@@ -150,3 +150,17 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+git status
+git diff main origin/main
+__vsc_prompt_cmd_original
+git merge main
+git merge origin/main
+git status
+git pull --no-ff
+git pull
+git pull --ff-only
+git merge --no-ff
+git checkout branch
+git checkout -b branch
+git commit -m "initial commit"
+git add .
