@@ -177,7 +177,17 @@ git add .
 git status
 git status
 git checkout main
+<<<<<<< Updated upstream
 =======
 >>>>>>> origin/main
 git commit -m "fixing conflictsÁ "
 git status
+=======
+git merge branch master --allow-unrelated-histories
+git merge branch main --allow-unrelated-histories
+git merge main branch --allow-unrelated-histories
+git merg branch origin/main --allow-unrelated-histories
+git merge branch origin/main --allow-unrelated-histories
+git merge branch origin/main --allow-unrelated-histories --force
+git merge branch origin/main --allow-unrelated-histories --autostash
+>>>>>>> Stashed changes
