@@ -4,6 +4,7 @@ builtin unset VSCODE_INJECTION
 [ -n "${VSCODE_ENV_REPLACE:-}" ]
 [ -n "${VSCODE_ENV_PREPEND:-}" ]
 [ -n "${VSCODE_ENV_APPEND:-}" ]
+<<<<<<< HEAD
 __vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
 [[ "$(uname -s)" =~ $__vsc_regex_environment ]]
 __vsc_is_windows=0
@@ -12,6 +13,11 @@ __vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
 __vsc_history_verify=1
 builtin unset __vsc_regex_environment
 builtin unset __vsc_regex_histcontrol
+=======
+[[ "$(uname -s)" =~ ^CYGWIN*|MINGW*|MSYS* ]]
+[[ "$HISTCONTROL" =~ .. ]]
+__vsc_history_verify=1
+>>>>>>> origin/main
 __vsc_initialized=0
 __vsc_original_PS1="$PS1"
 __vsc_original_PS2="$PS2"
@@ -21,18 +27,22 @@ __vsc_in_command_execution="1"
 __vsc_current_command=""
 __vsc_nonce="$VSCODE_NONCE"
 unset VSCODE_NONCE
+<<<<<<< HEAD
 __vsc_stable="$VSCODE_STABLE"
 unset VSCODE_STABLE
 [ "$__vsc_stable" = "0" ]
 [ -n "$STARSHIP_SESSION_KEY" ]
 [ -n "$POSH_SESSION_ID" ]
 builtin printf '\e]633;P;HasRichCommandDetection=True\a'
+=======
+>>>>>>> origin/main
 [[ -n "${bash_preexec_imported:-}" ]]
 __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 [[ -z "$__vsc_dbg_trap" ]]
 [[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
+<<<<<<< HEAD
 psql --username=freecodecamp --dbname=students
 builtin unset VSCODE_INJECTION
 [ -z "$VSCODE_SHELL_INTEGRATION" ]
@@ -167,3 +177,7 @@ git add .
 git status
 git status
 git checkout main
+=======
+>>>>>>> origin/main
+git commit -m "fixing conflictsÁ "
+git status
